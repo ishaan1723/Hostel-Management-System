@@ -1,39 +1,53 @@
 name: Backend CI Pipeline
-'on':
+
+on:
   push:
-    branches:
-      - master
+    branches: [ "master" ]
   pull_request:
-    branches:
-      - master
+    branches: [ "master" ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
+
       - name: Set up Java 17
         uses: actions/setup-java@v3
         with:
           java-version: '17'
-          distribution: temurin
+          distribution: 'temurin'
+
+      # 🔥 FIX STARTS HERE
+
       - name: Grant execute permission
         run: chmod +x mvnw
+        working-directory: Backend
+
       - name: Cache Maven dependencies
         uses: actions/cache@v3
         with:
           path: ~/.m2
-          key: '${{ runner.os }}-m2-${{ hashFiles(''**/pom.xml'') }}'
+          key: ${{ runner.os }}-m2-${{ hashFiles('Backend/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-m2
+
       - name: Build Project
         run: ./mvnw clean package -DskipTests
+        working-directory: Backend
+
       - name: Run Tests
         run: ./mvnw test || true
+        working-directory: Backend
+
       - name: Upload JAR Artifact
         uses: actions/upload-artifact@v4
         with:
           name: backend-jar
-          path: target/*.jar
+          path: Backend/target/*.jar
+
       - name: Build Docker Image
         run: docker build -t hostel-backend .
+        working-directory: Backend

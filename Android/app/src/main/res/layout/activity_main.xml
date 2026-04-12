@@ -273,6 +273,13 @@
             android:text="Remove"
             android:backgroundTint="#FF0000"
             android:textColor="#FFFFFF"/>
+
+        <SearchView
+            android:id="@+id/searchStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search Student..."
+            android:iconifiedByDefault="false"/>
         <!-- REFRESH -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"

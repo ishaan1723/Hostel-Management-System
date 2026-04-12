@@ -16,7 +16,7 @@ public class Room {
     private int capacity;
     private int occupiedBeds;
 
-    @OneToMany(mappedBy = "room")
+    @OneToMany(mappedBy = "room", fetch = FetchType.EAGER)
     private List<User> students;
 
     public Long getId() { return id; }

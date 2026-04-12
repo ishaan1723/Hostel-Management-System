@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212"
+    android:padding="24dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Room"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter room details"
+        android:textSize="14sp"
+        android:textColor="#888888"
+        android:layout_marginBottom="32dp"/>
+
+    <EditText
+        android:id="@+id/etRoomNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Room Number (e.g. 101)"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:backgroundTint="#333333"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/etCapacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Capacity (e.g. 4)"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:backgroundTint="#333333"
+        android:padding="12dp"
+        android:layout_marginBottom="32dp"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/btnAddRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Room"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#1565C0"
+        android:padding="12dp"/>
+
+</LinearLayout>

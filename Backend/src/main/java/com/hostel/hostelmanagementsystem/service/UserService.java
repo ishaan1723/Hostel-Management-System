@@ -3,8 +3,9 @@ package com.hostel.hostelmanagementsystem.service;
 import com.hostel.hostelmanagementsystem.entity.User;
 import com.hostel.hostelmanagementsystem.repository.UserRepository;
 import org.springframework.stereotype.Service;
-
+import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
+
 @Service
 public class UserService {
 
@@ -14,15 +15,13 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    @Transactional
     public User saveUser(User user) {
-
-        // check if username already exists
         if (userRepository.findByUsername(user.getUsername()).isPresent()) {
             throw new RuntimeException("Username already taken. Please choose another.");
         }
 
         String prefix;
-
         if (user.getRole().equalsIgnoreCase("STUDENT")) {
             prefix = "STU";
         } else if (user.getRole().equalsIgnoreCase("WARDEN")) {
@@ -32,20 +31,19 @@ public class UserService {
         }
 
         String uniqueNumber = String.valueOf(System.currentTimeMillis()).substring(8);
-        String userCode = prefix + uniqueNumber;
-
-        user.setUserCode(userCode);
+        user.setUserCode(prefix + uniqueNumber);
+        user.setId(null);
 
         return userRepository.save(user);
     }
-    public User loginUser(String username, String password) {
 
+    public User loginUser(String username, String password) {
         return userRepository
                 .findByUsernameAndPassword(username, password)
                 .orElseThrow(() -> new RuntimeException("Invalid username or password"));
     }
+
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
-
 }

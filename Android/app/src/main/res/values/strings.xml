@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">HostelApp</string>
+    <string name="title_activity_room">RoomActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_register_activity.kt">RegisterActivity.kt</string>
+    <string name="title_activity_assign_room_activity.kt">AssignRoomActivity.kt</string>
+    <string name="title_activity_assign_room">AssignRoomActivity</string>
+    <string name="title_activity_add_room_activity.kt">AddRoomActivity.kt</string>
+    <string name="title_activity_raise_complaint_activity.kt">RaiseComplaintActivity.kt</string>
+    <string name="title_activity_complaint_request">ComplaintRequest</string>
+    <string name="title_activity_view_complaints">ViewComplaintsActivity</string>
+    <string name="title_activity_notice_activity.kt">NoticeActivity.kt</string>
 </resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212"
+    android:padding="24dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Raise Complaint"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Describe your issue below"
+        android:textSize="14sp"
+        android:textColor="#888888"
+        android:layout_marginBottom="32dp"/>
+
+    <EditText
+        android:id="@+id/etComplaintTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:backgroundTint="#333333"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/etComplaintDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:backgroundTint="#333333"
+        android:padding="12dp"
+        android:layout_marginBottom="32dp"
+        android:inputType="textMultiLine"
+        android:minLines="4"
+        android:gravity="top"/>
+
+    <Button
+        android:id="@+id/btnSubmitComplaint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Complaint"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#B71C1C"
+        android:padding="12dp"/>
+
+</LinearLayout>

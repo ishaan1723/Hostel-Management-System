@@ -280,6 +280,14 @@
             android:layout_height="wrap_content"
             android:queryHint="Search Student..."
             android:iconifiedByDefault="false"/>
+
+        <TextView
+            android:id="@+id/tvStudentCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Total Students: 0"/>
         <!-- REFRESH -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"

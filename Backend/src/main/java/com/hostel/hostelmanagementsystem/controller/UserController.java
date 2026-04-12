@@ -4,6 +4,8 @@ import com.hostel.hostelmanagementsystem.dto.UserResponse;
 import com.hostel.hostelmanagementsystem.entity.User;
 import com.hostel.hostelmanagementsystem.repository.UserRepository;
 import com.hostel.hostelmanagementsystem.service.UserService;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -61,5 +63,8 @@ public class UserController {
     @GetMapping("/count")
     public long totalUsers() {
         return userRepository.count();
+       
+
+        
     }
 }

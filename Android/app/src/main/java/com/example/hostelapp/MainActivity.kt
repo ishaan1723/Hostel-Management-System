@@ -81,6 +81,7 @@ class MainActivity : AppCompatActivity() {
             loadDashboard()
         }
 
+
         // Logout
         btnLogout.setOnClickListener {
             val prefs = getSharedPreferences("hostel_prefs", MODE_PRIVATE)
@@ -117,6 +118,7 @@ class MainActivity : AppCompatActivity() {
             override fun onFailure(call: Call<DashboardResponse>, t: Throwable) {
                 usersText.text = "!"
             }
+
         })
     }
 }

@@ -21,35 +21,6 @@
         android:layout_height="match_parent"/>
 
 
-    <Button
-        android:id="@+id/btnRemoveStudent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Remove"
-        android:backgroundTint="#FF0000"
-        android:textColor="#FFFFFF"/>
-
-
-    <TextView
-        android:id="@+id/tvStudentCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Total Students: 0"/>
-
-
-    <Button
-        android:id="@+id/btnSortStudents"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sort A-Z"/>
-    <SearchView
-        android:id="@+id/searchStudent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:queryHint="Search Student..."
-        android:iconifiedByDefault="false"/>
-
+    
 
 </LinearLayout>

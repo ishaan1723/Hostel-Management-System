@@ -143,13 +143,13 @@ Run on emulator or physical device
 ## Screenshots
 
 ### CI Pipeline Success
-![CI Pipeline](docs/CI PIPELINE SUCCESS.png)
+![CI Pipeline](docs/CI-PIPELINE-SUCCESS.png)
 
 ### CD Pipeline Success
-![CD Pipeline](docs/CD PIPELINE SUCCESS.png)
+![CD Pipeline](docs/CD-PIPELINE-SUCCESS.png)
 
 ### Docker Hub Deployment
-![Docker Hub](docs/DOCKER HUB IMAGE.png)
+![Docker Hub](docs/DOCKER-HUB-IMAGE.png)
 
 ### App Screenshot
-![App](docs/ANDROID APPLICATION.jpeg)
+![App](docs/ANDROID-APPLICATION.jpeg)

@@ -21,7 +21,7 @@ MySQL Database
 ##  Team Contributions
 
 | Member | Work Done |
-
+|---|---|
 | ISHAAN JAIN | Android Frontend Development and Backend |
 | Yuvraj Singh | DevOps - CI/CD Pipeline and Docker |
 

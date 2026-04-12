@@ -143,7 +143,7 @@ Run on emulator or physical device
 ## Screenshots
 
 ### CI Pipeline Success
-![CI Pipeline](docs/CI PIPELINE SUCCESS.png)
+![CI Pipeline]docs/CI PIPELINE SUCCESS.png
 
 ### CD Pipeline Success
 ![CD Pipeline](docs/CD PIPELINE SUCCESS.png)

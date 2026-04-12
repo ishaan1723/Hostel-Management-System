@@ -1,13 +1,13 @@
-# 🏨 Hostel Management System
+# Hostel Management System
 
-## 📌 Problem Statement
+##  Problem Statement
 Managing hostel operations manually is inefficient and error-prone.
 This system automates room allocation, student registration, 
 complaints, and notices through a Spring Boot backend and Android app.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 Android App (Kotlin)
 ↓
 Retrofit API
@@ -18,7 +18,7 @@ MySQL Database
 
 ---
 
-## 👥 Team Contributions
+##  Team Contributions
 
 | Member | Work Done |
 
@@ -27,7 +27,7 @@ MySQL Database
 
 ---
 
-## 🌿 Git Workflow
+## Git Workflow
 
 | Branch | Purpose |
 |---|---|
@@ -36,7 +36,7 @@ MySQL Database
 
 ---
 
-## ⚙️ CI Pipeline (ci.yml)
+##  CI Pipeline (ci.yml)
 
 - Triggers on push and pull request to master
 - Sets up Java 17 with Temurin distribution
@@ -47,7 +47,7 @@ MySQL Database
 
 ---
 
-## ⚙️ CD Pipeline (cd.yml)
+##  CD Pipeline (cd.yml)
 
 - Triggers on push to master
 - Checks code quality using Checkstyle
@@ -59,7 +59,7 @@ MySQL Database
 
 ---
 
-## 🐳 Docker Deployment
+## Docker Deployment
 
 - Docker image automatically built and pushed via CD pipeline
 - Image Name: `Yuvraj2403/hostel-backend:latest`
@@ -67,7 +67,7 @@ MySQL Database
 
 ---
 
-## 🔐 GitHub Secrets Used
+## GitHub Secrets Used
 
 | Secret | Purpose |
 |---|---|
@@ -79,7 +79,7 @@ MySQL Database
 
 ---
 
-## ⚡ Maven Cache Optimization
+## Maven Cache Optimization
 
 - Maven dependencies cached using actions/cache@v3
 - Cache key based on pom.xml hash
@@ -88,7 +88,7 @@ MySQL Database
 
 ---
 
-## 🛠️ Tools Used
+##  Tools Used
 
 | Tool | Purpose |
 |---|---|
@@ -103,7 +103,7 @@ MySQL Database
 
 ---
 
-## 📱 Features
+## Features
 
 - Student Registration
 - Warden Management
@@ -116,7 +116,7 @@ MySQL Database
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### Backend
 ```bash
@@ -131,7 +131,7 @@ Run on emulator or physical device
 
 ---
 
-## 🐛 Challenges Faced
+## Challenges Faced
 
 - Fixed Retrofit double baseUrl bug
 - Configured Android cleartext traffic for local API calls
@@ -140,7 +140,7 @@ Run on emulator or physical device
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### CI Pipeline Success
 ![CI Pipeline](docs/CI PIPELINE SUCCESS.png)

@@ -32,7 +32,7 @@ MySQL Database
 | Branch | Purpose |
 |---|---|
 | `master` | Production ready stable code |
-| `feature/devops-enhancement` | CI/CD pipeline and Docker setup |
+| `feature/devops-enhancement` | experience Different features  |
 
 ---
 

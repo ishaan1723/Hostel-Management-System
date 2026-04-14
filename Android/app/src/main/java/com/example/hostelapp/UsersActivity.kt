@@ -30,8 +30,7 @@ class UsersActivity : AppCompatActivity() {
 
     private fun loadUsers() {
 
-        val apiService = RetrofitClient.getClient()
-            .create(ApiService::class.java)
+        val apiService = RetrofitClient.getClient().create(ApiService::class.java)
 
         apiService.getUsers().enqueue(object : Callback<List<User>> {
 
@@ -40,17 +39,27 @@ class UsersActivity : AppCompatActivity() {
                 response: Response<List<User>>
             ) {
                 if (response.isSuccessful && response.body() != null) {
-
-                    val users = response.body()!!
+                    // ✅ filter only students
+                    val users = response.body()!!.filter { it.role == "STUDENT" }
+                    if (users.isEmpty()) {
+                        Toast.makeText(
+                            this@UsersActivity,
+                            "No students found",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
                     recyclerView.adapter = UserAdapter(users)
-
                 } else {
                     Toast.makeText(this@UsersActivity, "Failed", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onFailure(call: Call<List<User>>, t: Throwable) {
-                Toast.makeText(this@UsersActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this@UsersActivity,
+                    "Error: ${t.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         })
     }
